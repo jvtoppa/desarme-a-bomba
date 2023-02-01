@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 443.4, "left": 12.45, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 259.25,
+      "left": 207.79,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 306.79,
+      "left": 147.52,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": 307.91,
+      "left": 90.06,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led4",
+      "top": 307.91,
+      "left": 28.09,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led5",
+      "top": 309.61,
+      "left": 255.59,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 399.23,
+      "left": 286.06,
+      "attrs": { "color": "green", "bounce": "0" }
+    }
+  ],
+  "connections": [
+    [ "uno:2", "led5:A", "green", [ "v0" ] ],
+    [ "uno:GND.1", "led5:C", "black", [ "v0" ] ],
+    [ "led1:C", "uno:GND.1", "green", [ "v123.6", "h-94.84" ] ],
+    [ "uno:3", "led1:A", "green", [ "v0" ] ],
+    [ "led2:A", "uno:4", "green", [ "v82", "h57.43" ] ],
+    [ "led2:C", "uno:GND.1", "green", [ "v86.25", "h-34.57" ] ],
+    [ "led3:A", "uno:5", "green", [ "v54.57", "h105.39" ] ],
+    [ "led3:C", "uno:GND.1", "green", [ "v76.64", "h12.25" ] ],
+    [ "led4:A", "uno:6", "green", [ "v44.38", "h152.5" ] ],
+    [ "led4:C", "uno:GND.1", "green", [ "v64.75", "h91.2" ] ],
+    [
+      "btn1:2.l",
+      "uno:GND.1",
+      "green",
+      [
+        "h-27.09",
+        "v-72.3",
+        "h46.47",
+        "v-105.94",
+        "h-128.24",
+        "v46.47",
+        "h-157.05",
+        "v125.46",
+        "h99.44"
+      ]
+    ],
+    [ "btn1:1.r", "uno:7", "green", [ "v-39.36", "h-150.78" ] ]
+  ],
+  "dependencies": {}
+}
